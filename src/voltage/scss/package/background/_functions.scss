@@ -1,0 +1,28 @@
+// ----------------------------------------------------------------
+// Background Attachment
+// ----------------------------------------------------------------
+
+/// Get a background-attachment value
+///
+/// @param {string} $key - Value to get from the `$bg-attachments` list
+/// @return {string} Background attachment value
+@function get-bg-attachment($key) {
+  $idx: index($bg-attachments, $key);
+  @return nth($bg-attachments, $idx);
+}
+
+// ----------------------------------------------------------------
+// Background Position
+// ----------------------------------------------------------------
+
+/// Get a background-position value
+///
+/// @param {string} $key - Value to get from `$bg-position-directions`
+/// @return {string} Background position value
+@function get-bg-position($key) {
+  @if map-has-key($bg-position-directions, $key) {
+    @return map-get($bg-position-directions, $key);
+  }
+
+  @return 'none';
+}

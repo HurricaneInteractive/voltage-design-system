@@ -1,0 +1,96 @@
+// ----------------------------------------------------------------
+// Background Attachment
+// ----------------------------------------------------------------
+
+/// Renders utility classes for `background-attachment`
+///
+/// @example scss - Utility classes
+///   .<prefix>-fixed
+///   // background-attachment: fixed;
+///
+@if $utility-attachments-class == true {
+  @each $key in $bg-attachments {
+    .#{$bg-prefix}-#{$key} {
+      @include set-bg-attachment($key);
+    }
+  }
+}
+
+// ----------------------------------------------------------------
+// Background Colour
+// ----------------------------------------------------------------
+
+/// Renders utility classes for `background-colour`
+///
+/// @example scss - Utility classes
+///   .<prefix>-blue-500
+///   // background-color: blue;
+///
+@if $utility-bg-colour-class == true {
+  @each $colour, $hex in $colours {
+    @each $tint, $per in $colours-tint-scale {
+      .#{$bg-prefix}-#{$colour}-#{$tint} {
+        @include set-bg-colour($colour, $tint);
+      }
+      @if $tint == '500' {
+        .#{$bg-prefix}-#{$colour} {
+          @include set-bg-colour($colour, $tint);
+        }
+      }
+    }
+  }
+}
+
+// ----------------------------------------------------------------
+// Background Position
+// ----------------------------------------------------------------
+
+/// Renders utility classes for `background-position`
+///
+/// @example scss - Utility classes
+///   .<prefix>-l
+///   // background-position: left;
+///
+@if $utility-bg-position-class == true {
+  @each $dir, $val in $bg-position-directions {
+    .#{$bg-prefix}-#{dir} {
+      @include set-bg-position($dir);
+    }
+  }
+}
+
+// ----------------------------------------------------------------
+// Background Repeat
+// ----------------------------------------------------------------
+
+/// Renders utility classes for `background-repeat`
+///
+/// @example scss - Utility classes
+///   .<prefix>-repeat
+///   // background-repeat: repeat;
+///
+@if $utility-bg-repeat-class == true {
+  @each $key in $bg-repeat {
+    .#{$bg-prefix}-#{key} {
+      @include set-bg-repeat($key);
+    }
+  }
+}
+
+// ----------------------------------------------------------------
+// Background Size
+// ----------------------------------------------------------------
+
+/// Renders utility classes for `background-size`
+///
+/// @example scss - Utility classes
+///   .<prefix>-contain
+///   // background-contain: contain;
+///
+@if $utility-bg-size-class == true {
+  @each $key in $bg-size {
+    .#{$bg-prefix}-#{key} {
+      @include set-bg-size($key);
+    }
+  }
+}

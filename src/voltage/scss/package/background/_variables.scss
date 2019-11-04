@@ -1,0 +1,58 @@
+$bg-prefix: "bg" !default;
+
+// ----------------------------------------------------------------
+// Background Attachment
+// Utilities for controlling how a background image behaves
+// when scrolling.
+// ----------------------------------------------------------------
+
+$bg-attachments: ("fixed", "local", "scroll");
+
+$utility-attachments-class: true !default;
+
+// ----------------------------------------------------------------
+// Background Colour
+// Utilities for controlling an element's background color.
+// ----------------------------------------------------------------
+
+$utility-bg-colour-class: true !default;
+
+// ----------------------------------------------------------------
+// Background Position
+// Utilities for controlling the position of an element's
+// background image.
+// ----------------------------------------------------------------
+
+$bg-position-directions: (
+  "t": "top",
+  "l": "left",
+  "r": "right",
+  "b": "bottom",
+  "c": "center",
+  "lt": "left top",
+  "lb": "left bottom",
+  "rt": "right top",
+  "rb": "right bottom"
+);
+
+$utility-bg-position-class: true !default;
+
+// ----------------------------------------------------------------
+// Background Repeat
+// Utilities for controlling the repetition of an element's
+// background image.
+// ----------------------------------------------------------------
+
+$bg-repeat: ('repeat', 'no-repeat', 'repeat-x', 'repeat-y');
+
+$utility-bg-repeat-class: true !default;
+
+// ----------------------------------------------------------------
+// Background Size
+// Utilities for controlling the background size of an element's
+// background image.
+// ----------------------------------------------------------------
+
+$bg-size: ('auto', 'cover', 'contain');
+
+$utility-bg-size-class: true !default;

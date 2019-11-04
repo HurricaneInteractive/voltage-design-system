@@ -1,0 +1,61 @@
+// ----------------------------------------------------------------
+// Background Attachment
+// ----------------------------------------------------------------
+
+/// Set the background-attachment value
+///
+/// @param {string} $key - Value to get from the `$bg-attachments` list
+@mixin set-bg-attachment($key) {
+  background-attachment: get-bg-attachment($key);
+}
+
+// ----------------------------------------------------------------
+// Background Colour
+// ----------------------------------------------------------------
+
+/// Set the background-color value
+///
+/// @param {key} $key - Value to get from the `$colours` list
+/// @param {string} $tint ['500'] - Tint of colour to get, defaults to 500
+@mixin set-bg-colour($key, $tint: '500') {
+  background-color: get-colour-tint($key, $tint);
+}
+
+// ----------------------------------------------------------------
+// Background Position
+// ----------------------------------------------------------------
+
+/// Set the background-position value
+///
+/// @param {key} $key - Value to get from `$bg-position-directions`
+@mixin set-bg-position($key) {
+  background-position: get-bg-position($key);
+}
+
+// ----------------------------------------------------------------
+// Background Repeat
+// ----------------------------------------------------------------
+
+/// Set the background-repeat value
+///
+/// @param {key} $key - Value to get from `$bg-repeat`
+@mixin set-bg-repeat($key) {
+  $idx: index($bg-repeat, $key);
+  @if idx != null {
+    background-repeat: nth($bg-repeat, $idx);
+  }
+}
+
+// ----------------------------------------------------------------
+// Background Size
+// ----------------------------------------------------------------
+
+/// Set the background-size value
+///
+/// @param {key} $key - Value to get from `$bg-size`
+@mixin set-bg-size($key) {
+  $idx: index($bg-size, $key);
+  @if idx != null {
+    background-size: nth($bg-size, $idx);
+  }
+}

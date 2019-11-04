@@ -1,0 +1,60 @@
+/// Tint method to mix a colour with a percentage of white
+///
+/// @param {hex} $colour - Colour you want to tint
+/// @param {percentage} $percentage - Percentage of white to add
+/// @return {hex} Tinted colour
+@function tint($colour, $percentage) {
+  @return mix(white, $colour, $percentage);
+}
+
+/// Tint method to mix a colour with a percentage of black
+///
+/// @param {hex} $colour - Colour you want to tint
+/// @param {percentage} $percentage - Percentage of black to add
+/// @return {hex} Tinted colour
+@function shade($colour, $percentage) {
+  @return mix(black, $colour, $percentage);
+}
+
+/// Get a colour in the `$colours` map
+///
+/// @param {string} $key - colour to get
+/// @return {hex} Returned hex value
+@function get-colour($key) {
+  @if map-has-key($colours, $key) {
+    @return map-get($colours, $key);
+  }
+
+  @return red;
+}
+
+/// Get a colours tinted value
+///
+/// @param {string} $key - key of a colour in the `$colours` map
+/// @param {string} $tint - Tint of the colour to get
+/// @return {hex} Tinted colour
+@function get-colour-tint($key, $tint) {
+  @if $key == "transparent" {
+    @return get-colour($key);
+  }
+
+  $tint-str: $tint;
+  $tint-num: number($tint);
+
+  @if $tint-num != 500 {
+    @if map-has-key($colours-tint-scale, $tint-str) {
+      $per: map-get($colours-tint-scale, $tint-str);
+      $col: get-colour($key);
+
+      @if $tint-num > 500 {
+        @return shade($col, $per);
+      }
+      @else {
+        @return tint($col, $per);
+      }
+    }
+  }
+  @else {
+    @return get-colour($key);
+  }
+}

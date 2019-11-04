@@ -1,0 +1,45 @@
+// ----------------------------------------------------------------
+// Colours
+// Base colours for the Voltage Design System
+// ----------------------------------------------------------------
+
+$black: #000000 !default;
+$white: #FFFFFF !default;
+$transparent: transparent !default;
+$grey: #636E79 !default;
+
+$blue: #005DAA !default;
+$sky-blue: #64B8E2 !default;
+$teal: #1DA3A6 !default;
+$green: #6DBE21 !default;
+$orange: #E27F17 !default;
+$purple: #9A258F !default;
+$beige: #A1917E !default;
+
+$colours: () !default;
+$colours-default: (
+  "black": $black,
+  "white": $white,
+  "transparent": $transparent,
+  "grey": $grey,
+  "blue": $blue,
+  "sky-blue": $sky-blue,
+  "teal": $teal,
+  "green": $green,
+  "orange": $orange,
+  "purple": $purple,
+  "beige": $beige,
+) !default;
+$colours: map-merge($colours-default, $colours);
+
+$colours-tint-scale: (
+  "100": 80%,
+  "200": 60%,
+  "300": 40%,
+  "400": 20%,
+  "500": 0%,
+  "600": 20%,
+  "700": 40%,
+  "800": 60%,
+  "900": 80%
+);
