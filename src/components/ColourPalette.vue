@@ -17,7 +17,6 @@
   }
   .sg-label {
     text-align: center;
-    font-family: Arial;
     font-size: 14px;
     padding-left: 10px;
   }
