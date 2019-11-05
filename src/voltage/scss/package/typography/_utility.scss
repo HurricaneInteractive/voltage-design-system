@@ -1,0 +1,95 @@
+// ----------------------------------------------------------------
+// Text size
+// ----------------------------------------------------------------
+
+@if $utility-text-size-class == true {
+  @each $key in map-keys($text-scale) {
+    .#{$text-prefix}-#{$key} {
+      @include set-text-size($key);
+    }
+  }
+}
+
+// ----------------------------------------------------------------
+// Line Height
+// ----------------------------------------------------------------
+
+@if $utility-line-height-class == true {
+  @each $key in map-keys($line-height-scale) {
+    .#{$lead-prefix}-#{$key} {
+      @include set-line-height($key);
+    }
+  }
+}
+
+// ----------------------------------------------------------------
+// Font weight
+// ----------------------------------------------------------------
+
+@if $utility-font-weight-class == true {
+  @each $key in map-keys($font-weight-scale) {
+    .#{$font-prefix}-#{$key} {
+      @include set-font-weight($key);
+    }
+  }
+}
+
+// ----------------------------------------------------------------
+// Font Style
+// ----------------------------------------------------------------
+
+@if $utility-font-style-class == true {
+  @each $key in map-keys($font-style-scale) {
+    .#{$key} {
+      @include set-font-style($key);
+    }
+  }
+}
+
+// ----------------------------------------------------------------
+// Text align
+// ----------------------------------------------------------------
+
+@if $utility-text-align-class == true {
+  @each $key in map-keys($text-align-scale) {
+    .#{$text-prefix}-#{$key} {
+      @include set-text-align($key);
+    }
+  }
+}
+
+// ----------------------------------------------------------------
+// Text decoration
+// ----------------------------------------------------------------
+
+@if $utility-text-decoration-class == true {
+  @each $key in map-keys($text-decoration-scale) {
+    .#{$key} {
+      @include set-text-decoration($key);
+    }
+  }
+}
+
+// ----------------------------------------------------------------
+// Text transform
+// ----------------------------------------------------------------
+
+@if $utility-text-transform-class == true {
+  @each $key in map-keys($text-transform-scale) {
+    .#{$key} {
+      @include set-text-transform($key);
+    }
+  }
+}
+
+// ----------------------------------------------------------------
+// Font Family
+// ----------------------------------------------------------------
+
+@if $utility-font-family-class == true {
+  @each $key in map-keys($font-family-scale) {
+    .#{$font-prefix}-#{$key} {
+      @include set-font-family($key);
+    }
+  }
+}

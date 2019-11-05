@@ -1,0 +1,107 @@
+// ----------------------------------------------------------------
+// Text size
+// ----------------------------------------------------------------
+
+/// Get the text size value from `$text-scale`
+///
+/// @param {string} $key
+/// @return {px} font size in px
+@function get-text-size($key) {
+  @return map-get-value($text-scale, $key);
+}
+
+// ----------------------------------------------------------------
+// Line Height
+// ----------------------------------------------------------------
+
+/// Gets the line height value from `$line-height-scale`
+///
+/// @param {string} $key
+/// @return {number} line-height value
+@function get-line-height($key) {
+  @return map-get-value($line-height-scale, $key);
+}
+
+// ----------------------------------------------------------------
+// Font weight
+// ----------------------------------------------------------------
+
+/// Gets the font-weight value from `$font-weight-scale`
+///
+/// @param {string} $key
+/// @return {number} font weight value
+@function get-font-weight($key) {
+  @return map-get-value($font-weight-scale, $key);
+}
+
+// ----------------------------------------------------------------
+// Font Style
+// ----------------------------------------------------------------
+
+/// Get the font-style value from `$font-style-scale`
+///
+/// @param {string} $key
+/// @return {string} font style attribute
+@function get-font-style($key) {
+  @if $key == "normal" {
+    @return map-get-value($font-style-scale, "not-italic");
+  }
+
+  @return map-get-value($font-style-scale, $key);
+}
+
+// ----------------------------------------------------------------
+// Text align
+// ----------------------------------------------------------------
+
+/// Get the text-align value from `$text-align-scale`
+///
+/// @param {string} $key
+/// @return {string} text align attribute
+@function get-text-align($key) {
+  @return map-get-value($text-align-scale, $key);
+}
+
+// ----------------------------------------------------------------
+// Text decoration
+// ----------------------------------------------------------------
+
+/// Get the text-decoration value from `$text-decoration-scale`
+///
+/// @param {string} $key
+/// @return {string} text decoration attribute
+@function get-text-decoration($key) {
+  @if $key == "none" {
+    @return map-get-value($text-decoration-scale, "no-underline");
+  }
+
+  @return map-get-value($text-decoration-scale, $key);
+}
+
+// ----------------------------------------------------------------
+// Text transform
+// ----------------------------------------------------------------
+
+/// Get the text-transform value from `$text-transform-scale`
+///
+/// @param {string} $key
+/// @return {string} text transform attribute
+@function get-text-transform($key) {
+  @if $key == "none" {
+    @return map-get-value($text-transform-scale, "normal-case");
+  }
+
+  @return map-get-value($text-transform-scale, $key);
+}
+
+// ----------------------------------------------------------------
+// Font Family
+// ----------------------------------------------------------------
+
+/// Get the font-family value from `$font-family-scale`
+///
+/// @param {string} $key
+/// @return {string} font family attribute
+@function get-font-family($key) {
+  @return unquote(map-get-value($font-family-scale, $key));
+}

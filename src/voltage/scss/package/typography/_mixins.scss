@@ -1,0 +1,87 @@
+// ----------------------------------------------------------------
+// Text size
+// ----------------------------------------------------------------
+
+/// Sets the text size value
+///
+/// @param {string} $key
+@mixin set-text-size($key) {
+  font-size: get-text-size($key);
+}
+
+// ----------------------------------------------------------------
+// Line Height
+// ----------------------------------------------------------------
+
+/// Sets the line height value
+///
+/// @param {string} $key
+@mixin set-line-height($key) {
+  line-height: get-line-height($key);
+}
+
+// ----------------------------------------------------------------
+// Font weight
+// ----------------------------------------------------------------
+
+/// Sets the font-weight value
+///
+/// @param {string} $key
+@mixin set-font-weight($key) {
+  font-weight: get-font-weight($key);
+}
+
+// ----------------------------------------------------------------
+// Font Style
+// ----------------------------------------------------------------
+
+/// Sets the font-style value
+///
+/// @param {string} $key
+@mixin set-font-style($key) {
+  font-style: get-font-style($key);
+}
+
+// ----------------------------------------------------------------
+// Text align
+// ----------------------------------------------------------------
+
+/// Sets the text-align value
+///
+/// @param {string} $key
+@mixin set-text-align($key) {
+  text-align: get-text-align($key);
+}
+
+// ----------------------------------------------------------------
+// Text decoration
+// ----------------------------------------------------------------
+
+/// Sets the text-decoration value
+///
+/// @param {string} $key
+@mixin set-text-decoration($key) {
+  text-decoration: get-text-decoration($key);
+}
+
+// ----------------------------------------------------------------
+// Text transform
+// ----------------------------------------------------------------
+
+/// Sets the text-transform value
+///
+/// @param {string} $key
+@mixin set-text-transform($key) {
+  text-transform: get-text-transform($key);
+}
+
+// ----------------------------------------------------------------
+// Font Family
+// ----------------------------------------------------------------
+
+/// Sets the font-family value
+///
+/// @param {string} $key
+@mixin set-font-family($key) {
+  font-family: get-font-family($key);
+}
