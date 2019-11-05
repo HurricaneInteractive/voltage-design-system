@@ -9,3 +9,15 @@
 @mixin set-bg-colour($key, $tint: '500') {
   background-color: get-colour-tint($key, $tint);
 }
+
+// ----------------------------------------------------------------
+// Text Colour
+// ----------------------------------------------------------------
+
+/// Set the color value
+///
+/// @param {key} $key - Value to get from the `$colours` list
+/// @param {string} $tint ['500'] - Tint of colour to get, defaults to 500
+@mixin set-text-colour($key, $tint: '500') {
+  color: get-colour-tint($key, $tint);
+}
