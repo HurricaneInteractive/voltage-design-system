@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 const scsslist = (value) => {
-  return value.replace(/"/g, "").split(",")
+  const list = value.replace(/"/g, "").split(",")
+  return list.map((c) => c.trim())
 }
 
 export default scsslist
