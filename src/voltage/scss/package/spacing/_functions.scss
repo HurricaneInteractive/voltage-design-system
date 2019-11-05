@@ -1,0 +1,19 @@
+// ----------------------------------------------------------------
+// Spacing
+// ----------------------------------------------------------------
+
+/// Get a spacing value from `spacing-scale`
+///
+/// @param {string} $key ["0"] - Key of the spacing value to get
+/// @return {px} Returned spacing value
+@function get-spacing-value($key: "0") {
+  @return map-get-value($spacing-scale, $key);
+}
+
+/// Get a spacing prop from `spacing-directions`
+///
+/// @param {string} $key ["p"] - Key of the spacing prop to get
+/// @return {string|list} Returned spacing prop/s
+@function get-spacing-prop($key: "p") {
+  @return map-get-value($spacing-directions, $key);
+}

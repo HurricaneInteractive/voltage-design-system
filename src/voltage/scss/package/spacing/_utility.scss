@@ -1,0 +1,19 @@
+// ----------------------------------------------------------------
+// Spacing
+// ----------------------------------------------------------------
+
+/// Renders utility classes for padding and margins
+///
+/// @example scss - Utility classes
+///   .{p|m}{t|r|b|l|y|x}-<size>
+///   // padding: 24px
+///
+@if $utility-spacing-class == true {
+  @each $size in map-keys($spacing-scale) {
+    @each $dir in map-keys($spacing-directions) {
+      .#{$dir}-#{$size} {
+        @include set-spacing($size, $dir);
+      }
+    }
+  }
+}

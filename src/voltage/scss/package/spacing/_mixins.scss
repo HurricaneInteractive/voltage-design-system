@@ -1,0 +1,22 @@
+// ----------------------------------------------------------------
+// Spacing
+// ----------------------------------------------------------------
+
+/// Sets the spacing value in a given direction
+///
+/// @param {string} $key - Spacing value to assign
+/// @param {string} $direction - Direction to apply spacing
+@mixin set-spacing($key, $direction) {
+  $val: get-spacing-value($key);
+
+  @if $direction == "py" or $direction == "px" or $direction == "my" or $direction == "mx" {
+    $props: get-spacing-prop($direction);
+    @each $prop in $props {
+      #{unquote($prop)}: $val;
+    }
+  }
+  @else {
+    $prop: get-spacing-prop($direction);
+    #{unquote($prop)}: $val;
+  }
+}

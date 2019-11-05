@@ -1,0 +1,43 @@
+// ----------------------------------------------------------------
+// Spacing
+// Base spacing for the Voltage Design System
+// ----------------------------------------------------------------
+
+$spacing-scale: () !default;
+$spacing-scale-default: (
+  "0": 0px,
+  "1": 8px,
+  "2": 12px,
+  "3": 16px,
+  "4": 20px,
+  "5": 24px,
+  "6": 32px,
+  "7": 48px,
+  "8": 64px,
+  "9": 96px
+);
+$spacing-scale: map-merge($spacing-scale-default, $spacing-scale);
+
+$spacing-props: (
+  "m": "margin",
+  "p": "padding"
+);
+
+$spacing-directions: (
+  'p': 'padding',
+  'pt': 'padding-top',
+  'pr': 'padding-right',
+  'pb': 'padding-bottom',
+  'pl': 'padding-left',
+  'py': ( 'padding-top', 'padding-bottom' ),
+  'px': ( 'padding-right', 'padding-left' ),
+  'm': 'margin',
+  'mt': 'margin-top',
+  'mr': 'margin-right',
+  'mb': 'margin-bottom',
+  'ml': 'margin-left',
+  'my': ( 'margin-top', 'margin-bottom' ),
+  'mx': ( 'margin-right', 'margin-left' )
+);
+
+$utility-spacing-class: true !default;
