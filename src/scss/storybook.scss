@@ -1,0 +1,5 @@
+@import "../voltage/scss/package/typography.scss";
+
+body {
+  @include set-font-family("body");
+}
