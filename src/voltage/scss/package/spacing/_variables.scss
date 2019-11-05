@@ -18,11 +18,6 @@ $spacing-scale-default: (
 );
 $spacing-scale: map-merge($spacing-scale-default, $spacing-scale);
 
-$spacing-props: (
-  "m": "margin",
-  "p": "padding"
-);
-
 $spacing-directions: (
   'p': 'padding',
   'pt': 'padding-top',
@@ -41,3 +36,9 @@ $spacing-directions: (
 );
 
 $utility-spacing-class: true !default;
+
+:export {
+  keys: map-keys($spacing-scale);
+  sizes: map-values($spacing-scale);
+  dirs: map-keys($spacing-directions);
+}
