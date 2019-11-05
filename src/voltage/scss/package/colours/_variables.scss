@@ -50,6 +50,9 @@ $utility-bg-colour-class: true !default;
 $text-prefix: "text";
 $utility-text-colour-class: true !default;
 
+$border-prefix: "border";
+$utility-border-colour-class: true !default;
+
 :export {
   colours: map-keys($colours);
   tints: map-keys($colours-tint-scale);

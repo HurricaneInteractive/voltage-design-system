@@ -47,3 +47,28 @@
     }
   }
 }
+
+// ----------------------------------------------------------------
+// Border Colour
+// ----------------------------------------------------------------
+
+/// Renders utility classes for `color`
+///
+/// @example scss - Utility classes
+///   .<prefix>-blue-500
+///   // color: blue;
+///
+@if $utility-border-colour-class == true {
+  @each $colour, $hex in $colours {
+    @each $tint, $per in $colours-tint-scale {
+      .#{$border-prefix}-#{$colour}-#{$tint} {
+        @include set-border-colour($colour, $tint);
+      }
+      @if $tint == '500' {
+        .#{$border-prefix}-#{$colour} {
+          @include set-border-colour($colour, $tint);
+        }
+      }
+    }
+  }
+}

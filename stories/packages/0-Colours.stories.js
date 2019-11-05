@@ -1,5 +1,6 @@
 import BackgroundColours from "../../src/components/Colours/BackgroundColours.vue"
 import TextColours from "../../src/components/Colours/TextColours.vue"
+import BorderColours from "../../src/components/Colours/BorderColours.vue"
 
 export default {
   title: "Colours"
@@ -16,5 +17,12 @@ export const text = () => ({
   components: { TextColours },
   render(h) {
     return <text-colours />;
+  },
+})
+
+export const border = () => ({
+  components: { BorderColours },
+  render(h) {
+    return <border-colours />;
   },
 })

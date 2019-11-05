@@ -21,3 +21,15 @@
 @mixin set-text-colour($key, $tint: '500') {
   color: get-colour-tint($key, $tint);
 }
+
+// ----------------------------------------------------------------
+// Border Colour
+// ----------------------------------------------------------------
+
+/// Set the border-color value
+///
+/// @param {key} $key - Value to get from the `$colours` list
+/// @param {string} $tint ['500'] - Tint of colour to get, defaults to 500
+@mixin set-border-colour($key, $tint: '500') {
+  border-color: get-colour-tint($key, $tint);
+}
