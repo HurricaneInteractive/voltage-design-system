@@ -10,18 +10,6 @@
 }
 
 // ----------------------------------------------------------------
-// Background Colour
-// ----------------------------------------------------------------
-
-/// Set the background-color value
-///
-/// @param {key} $key - Value to get from the `$colours` list
-/// @param {string} $tint ['500'] - Tint of colour to get, defaults to 500
-@mixin set-bg-colour($key, $tint: '500') {
-  background-color: get-colour-tint($key, $tint);
-}
-
-// ----------------------------------------------------------------
 // Background Position
 // ----------------------------------------------------------------
 

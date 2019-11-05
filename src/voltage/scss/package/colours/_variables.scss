@@ -43,3 +43,11 @@ $colours-tint-scale: (
   "800": 60%,
   "900": 80%
 );
+
+$bg-prefix: "bg";
+$utility-bg-colour-class: true !default;
+
+:export {
+  colours: map-keys($colours);
+  tints: map-keys($colours-tint-scale);
+}

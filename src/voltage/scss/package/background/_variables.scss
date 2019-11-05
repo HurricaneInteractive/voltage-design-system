@@ -1,4 +1,4 @@
-$bg-prefix: "bg" !default;
+$bg-prefix: "bg";
 
 // ----------------------------------------------------------------
 // Background Attachment
@@ -9,13 +9,6 @@ $bg-prefix: "bg" !default;
 $bg-attachments: ("fixed", "local", "scroll");
 
 $utility-attachments-class: true !default;
-
-// ----------------------------------------------------------------
-// Background Colour
-// Utilities for controlling an element's background color.
-// ----------------------------------------------------------------
-
-$utility-bg-colour-class: true !default;
 
 // ----------------------------------------------------------------
 // Background Position

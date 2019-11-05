@@ -1,0 +1,24 @@
+// ----------------------------------------------------------------
+// Background Colour
+// ----------------------------------------------------------------
+
+/// Renders utility classes for `background-colour`
+///
+/// @example scss - Utility classes
+///   .<prefix>-blue-500
+///   // background-color: blue;
+///
+@if $utility-bg-colour-class == true {
+  @each $colour, $hex in $colours {
+    @each $tint, $per in $colours-tint-scale {
+      .#{$bg-prefix}-#{$colour}-#{$tint} {
+        @include set-bg-colour($colour, $tint);
+      }
+      @if $tint == '500' {
+        .#{$bg-prefix}-#{$colour} {
+          @include set-bg-colour($colour, $tint);
+        }
+      }
+    }
+  }
+}
