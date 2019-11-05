@@ -10,12 +10,6 @@
 
 <style lang="scss" scoped>
 .scale-wrap {
-  .example-class {
-    display: block;
-    padding: 10px;
-    background: #f4f4f4;
-    margin-bottom: 30px;
-  }
   > div {
     display: flex;
     align-items: flex-start;

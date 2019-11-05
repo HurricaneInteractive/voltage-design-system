@@ -3,3 +3,10 @@
 body {
   @include set-font-family("body");
 }
+
+.example-class {
+  display: block;
+  padding: 10px;
+  background: #f4f4f4;
+  margin-bottom: 30px;
+}
