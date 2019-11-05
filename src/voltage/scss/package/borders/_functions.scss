@@ -1,0 +1,35 @@
+// ----------------------------------------------------------------
+// Border Style
+// ----------------------------------------------------------------
+
+/// Get the border style value from `$border-style-scale`
+///
+/// @param {string} $key
+/// @return {string} border style value
+@function get-border-style($key) {
+  @return map-get-value($border-style-scale, $key);
+}
+
+// ----------------------------------------------------------------
+// Border Width
+// ----------------------------------------------------------------
+
+/// Get the border width value from `$border-width-scale`
+///
+/// @param {string} $key
+/// @return {px} border width value
+@function get-border-width($key) {
+  @return map-get-value($border-width-scale, $key);
+}
+
+// ----------------------------------------------------------------
+// Border Radius
+// ----------------------------------------------------------------
+
+/// Get the border radius value from `$border-radius-scale`
+///
+/// @param {string} $key
+/// @return {string} border radius value
+@function get-border-radius($key) {
+  @return map-get-value($border-radius-scale, $key);
+}

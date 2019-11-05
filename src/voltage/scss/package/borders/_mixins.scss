@@ -1,0 +1,46 @@
+// ----------------------------------------------------------------
+// Border Style
+// ----------------------------------------------------------------
+
+/// Set the border style value
+///
+/// @param {string} $key
+@mixin set-border-style($key) {
+  border-style: get-border-style($key);
+}
+
+// ----------------------------------------------------------------
+// Border Width
+// ----------------------------------------------------------------
+
+/// Set the border width value
+///
+/// @param {string} $key
+/// @param {string} $dir [null] - direction to apply border width
+@mixin set-border-width($key, $dir: null) {
+  @if $dir == null {
+    border-width: get-border-width($key);
+  }
+  @else {
+    $prop: map-get-value($border-width-directions, $dir);
+    border-#{$prop}-width: get-border-width($key);
+  }
+}
+
+// ----------------------------------------------------------------
+// Border Radius
+// ----------------------------------------------------------------
+
+/// Set the border radius value
+///
+/// @param {string} $key
+/// @param {string} $dir [null] - direction to apply border radius
+@mixin set-border-radius($key, $dir: null) {
+  @if $dir == null {
+    border-radius: get-border-radius($key);
+  }
+  @else {
+    $prop: map-get-value($border-radius-directions, $dir);
+    border-#{$prop}-radius: get-border-radius($key);
+  }
+}

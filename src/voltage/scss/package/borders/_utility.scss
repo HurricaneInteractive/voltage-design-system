@@ -1,0 +1,72 @@
+// ----------------------------------------------------------------
+// Border Style
+// ----------------------------------------------------------------
+
+@if $utility-border-style-class == true {
+  @each $key in map-keys($border-style-scale) {
+    .#{$border-prefix}-#{$key} {
+      @include set-border-style($key);
+    }
+  }
+}
+
+// ----------------------------------------------------------------
+// Border Width
+// ----------------------------------------------------------------
+
+@if $utility-border-width-class == true {
+  .#{$border-prefix} {
+    border-width: 1px;
+  }
+  @each $dir in map-keys($border-width-directions) {
+    .#{$border-prefix}-#{$dir} {
+      border-#{$dir}-width: 1px;
+    }
+  }
+  @each $key in map-keys($border-width-scale) {
+    .#{$border-prefix}-#{$key} {
+      @include set-border-width($key);
+    }
+    @each $dir in map-keys($border-width-directions) {
+      .#{$border-prefix}-#{$dir}-#{$key} {
+        @include set-border-width($key, $dir);
+      }
+    }
+  }
+}
+
+// ----------------------------------------------------------------
+// Border Radius
+// ----------------------------------------------------------------
+
+@if $utility-border-radius-class == true {
+  @each $dir in map-keys($border-radius-directions) {
+    .#{$radius-prefix}-#{$dir} {
+      border-#{$dir}-radius: map-get-value($border-radius-scale, "rounded");
+    }
+  }
+  @each $key in map-keys($border-radius-scale) {
+    @if $key == "rounded" {
+      .#{$key} {
+        @include set-border-radius($key);
+      }
+    }
+    @else {
+      .#{$radius-prefix}-#{$key} {
+        @include set-border-radius($key);
+      }
+    }
+    @each $dir in map-keys($border-radius-directions) {
+      @if $key != "rounded" {
+        .#{$radius-prefix}-#{$dir}-#{$key} {
+          @include set-border-radius($key, $dir);
+        }
+      }
+      @else {
+        .#{$radius-prefix}-#{$dir} {
+          @include set-border-radius($key, $dir);
+        }
+      }
+    }
+  }
+}

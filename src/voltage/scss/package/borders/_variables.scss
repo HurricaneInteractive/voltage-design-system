@@ -1,0 +1,71 @@
+$border-prefix: "border";
+$radius-prefix: "rounded";
+
+// ----------------------------------------------------------------
+// Border Style
+// Utilities for controlling the style of an element's borders.
+// ----------------------------------------------------------------
+
+$border-style-scale: () !default;
+$border-style-scale-default: (
+  "solid": solid,
+  "none": none
+);
+$border-style-scale: map-merge($border-style-scale-default, $border-style-scale);
+
+$utility-border-style-class: true !default;
+
+// ----------------------------------------------------------------
+// Border Width
+// Utilities for controlling the width an element's borders.
+// ----------------------------------------------------------------
+
+$border-width-scale: () !default;
+$border-width-scale-default: (
+  "0": 0px,
+  "1": 1px,
+  "2": 2px,
+  "4": 4px
+);
+$border-width-scale: map-merge($border-width-scale-default, $border-width-scale);
+
+$border-width-directions: (
+  "t": "top",
+  "r": "right",
+  "b": "bottom",
+  "l": "left"
+);
+
+$utility-border-width-class: true !default;
+
+// ----------------------------------------------------------------
+// Border Radius
+// Utilities for controlling the border radius of an element.
+// ----------------------------------------------------------------
+$border-radius-scale: () !default;
+$border-radius-scale-default: (
+  "none": 0px,
+  "rounded": 4px,
+  "circle": 50%,
+  "full": 9999px
+);
+$border-radius-scale: map-merge($border-radius-scale-default, $border-radius-scale);
+
+$border-radius-directions: (
+  "tl": "top-left",
+  "tr": "top-right",
+  "bl": "bottom-left",
+  "br": "bottom-right"
+);
+
+$utility-border-radius-class: true !default;
+
+:export {
+  borderPrefix: unquote($border-prefix);
+  radiusPrefix: unquote($radius-prefix);
+  borderStyle: map-keys($border-style-scale);
+  borderWidth: map-keys($border-width-scale);
+  borderWidthDir: map-keys($border-width-directions);
+  borderRadius: map-keys($border-radius-scale);
+  borderRadiusDir: map-keys($border-radius-directions);
+}
