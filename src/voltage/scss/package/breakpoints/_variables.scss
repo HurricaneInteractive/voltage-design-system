@@ -1,0 +1,18 @@
+// ----------------------------------------------------------------
+// Breakpoints
+// Customizing the default breakpoints for your project.
+// ----------------------------------------------------------------
+
+$breakpoints: () !default;
+$breakpoints-default: (
+  'sm': 640px,
+  'md': 768px,
+  'lg': 1024px,
+  'xl': 1280px
+);
+$breakpoints: map-merge($breakpoints-default, $breakpoints);
+
+:export {
+  breakpoints: map-keys($breakpoints);
+  breakpointPx: map-values($breakpoints);
+}

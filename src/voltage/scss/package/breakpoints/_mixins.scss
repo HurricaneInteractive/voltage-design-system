@@ -1,0 +1,21 @@
+// ----------------------------------------------------------------
+// Breakpoints
+// ----------------------------------------------------------------
+
+/// Sets a breakpoint value
+///
+/// @param {string} $key
+@mixin set-breakpoint($key) {
+  @media (min-width: get-breakpoint($key)) {
+    @content;
+  }
+}
+
+/// Sets a breakpoint value
+///
+/// @param {string} $key
+@mixin set-max-breakpoint($key) {
+  @media (max-width: get-max-breakpoint($key)) {
+    @content;
+  }
+}

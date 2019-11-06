@@ -1,0 +1,19 @@
+// ----------------------------------------------------------------
+// Breakpoints
+// ----------------------------------------------------------------
+
+/// Gets a breakpoint value
+///
+/// @param {string} $key
+/// @return {px} Breakpoint value
+@function get-breakpoint($key) {
+  @return map-get-value($breakpoints, $key);
+}
+
+/// Gets a breakpoint value
+///
+/// @param {string} $key
+/// @return {px} Breakpoint value
+@function get-max-breakpoint($key) {
+  @return get-breakpoint($key) - 1px;
+}
