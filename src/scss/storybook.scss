@@ -1,4 +1,5 @@
 @import "../voltage/scss/package/typography.scss";
+@import "../voltage/scss/package/colours.scss";
 
 body {
   @include set-font-family("body");
@@ -9,6 +10,7 @@ body {
   padding: 10px;
   background: #f4f4f4;
   margin-bottom: 30px;
+  @include set-text-colour("blue");
 }
 
 .content-container {
