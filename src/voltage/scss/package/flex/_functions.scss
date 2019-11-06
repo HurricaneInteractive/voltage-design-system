@@ -1,0 +1,115 @@
+// ----------------------------------------------------------------
+// Flex Direction
+// ----------------------------------------------------------------
+
+/// Get a flex direction value from `flex-directions`
+///
+/// @param {string} $key Key of the direction value to get
+/// @return {string} Returned direction value
+@function get-flex-direction($key) {
+  @return map-get-value($flex-directions, $key);
+}
+
+// ----------------------------------------------------------------
+// Flex Wrap
+// ----------------------------------------------------------------
+
+/// Get a flex wrap value from `flex-wrap`
+///
+/// @param {string} $key Key of the wrap value to get
+/// @return {string} Returned wrap value
+@function get-flex-wrap($key) {
+  @return map-get-value($flex-wrap, $key);
+}
+
+// ----------------------------------------------------------------
+// Align Items
+// ----------------------------------------------------------------
+
+/// Get a align items value from `align-items`
+///
+/// @param {string} $key Key of the align items value to get
+/// @return {string} Returned align items value
+@function get-align-item($key) {
+  @return map-get-value($align-items, $key);
+}
+
+// ----------------------------------------------------------------
+// Content
+// ----------------------------------------------------------------
+
+/// Get a flex content value from `content`
+///
+/// @param {string} $key Key of the content value to get
+/// @return {string} Returned content value
+@function get-flex-content($key) {
+  @return map-get-value($content, $key);
+}
+
+// ----------------------------------------------------------------
+// Align Self
+// ----------------------------------------------------------------
+
+/// Get a align self value from `align-self`
+///
+/// @param {string} $key Key of the align self value to get
+/// @return {string} Returned align self value
+@function get-align-self($key) {
+  @return map-get-value($align-self, $key);
+}
+
+// ----------------------------------------------------------------
+// Flex
+// ----------------------------------------------------------------
+
+/// Get a flex value from `flex`
+///
+/// @param {string} $key Key of the flex value to get
+/// @return {string} Returned flex value
+@function get-flex($key) {
+  @return map-get-value($flex, $key);
+}
+
+// ----------------------------------------------------------------
+// Flex Grow
+// ----------------------------------------------------------------
+
+/// Get a grow value from `flex-grow`
+///
+/// @param {string} $key Key of the grow value to get
+/// @return {string} Returned grow value
+@function get-flex-grow($key) {
+  @if (quote($key) == "1") {
+    $key: "default";
+  }
+
+  @return map-get-value($flex-grow, $key);
+}
+
+// ----------------------------------------------------------------
+// Flex Shrink
+// ----------------------------------------------------------------
+
+/// Get a shrink value from `flex-shrink`
+///
+/// @param {string} $key Key of the shrink value to get
+/// @return {string} Returned shrink value
+@function get-flex-shrink($key) {
+  @if (quote($key) == "1") {
+    $key: "default";
+  }
+
+  @return map-get-value($flex-shrink, $key);
+}
+
+// ----------------------------------------------------------------
+// Order
+// ----------------------------------------------------------------
+
+/// Get a order value from `flex-order`
+///
+/// @param {string} $key Key of the order value to get
+/// @return {string} Returned order value
+@function get-order($key) {
+  @return map-get-value($flex-order, $key);
+}

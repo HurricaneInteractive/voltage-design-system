@@ -1,0 +1,152 @@
+$flex-prefix: "flex";
+$item-prefix: "items";
+$content-prefix: "content";
+$justify-prefix: "justify";
+$order-prefix: "order";
+$self-prefix: "self";
+
+// ----------------------------------------------------------------
+// Flex Direction
+// Utilities for controlling the direction of flex items.
+// ----------------------------------------------------------------
+
+$flex-directions: (
+  "row": row,
+  "row-reverse": row-reverse,
+  "column": column,
+  "column-reverse": column-reverse
+);
+$utility-flex-direction-class: true !default;
+
+// ----------------------------------------------------------------
+// Flex Wrap
+// Utilities for controlling how flex items wrap.
+// ----------------------------------------------------------------
+
+$flex-wrap: (
+  "no-wrap": nowrap,
+  "wrap": wrap,
+  "wrap-reverse": wrap-reverse
+);
+$utility-flex-wrap-class: true !default;
+
+// ----------------------------------------------------------------
+// Align Items
+// Utilities for controlling how flex items are positioned along
+// a container's cross axis.
+// ----------------------------------------------------------------
+
+$align-items: (
+  "stretch": stretch,
+  "start": flex-start,
+  "center": center,
+  "end": flex-end,
+  "baseline": baseline
+);
+$utility-align-items-class: true !default;
+
+// ----------------------------------------------------------------
+// Align Content
+// Utilities for controlling how lines are positioned in
+// multi-line flex containers.
+//
+// Justify Content
+// Utilities for controlling how flex items are positioned along
+// a container's main axis.
+// ----------------------------------------------------------------
+
+$content: (
+  "start": flex-start,
+  "center": center,
+  "end": flex-end,
+  "between": space-between,
+  "around": space-around
+);
+$utility-align-content-class: true !default;
+$utility-justify-content-class: true !default;
+
+// ----------------------------------------------------------------
+// Align Self
+// Utilities for controlling how an individual flex item is
+// positioned along its container's cross axis.
+// ----------------------------------------------------------------
+
+$align-self: (
+  "start": flex-start,
+  "center": center,
+  "end": flex-end,
+  "stretch": stretch,
+  "auto": auto
+);
+$utility-align-self-class: true !default;
+
+// ----------------------------------------------------------------
+// Flex
+// Utilities for controlling how flex items both grow and shrink.
+// ----------------------------------------------------------------
+
+$flex: (
+  "initial": 0 1 auto,
+  "1": 1 1 0%,
+  "auto": 1 1 auto,
+  "none": none
+);
+$utility-flex-class: true !default;
+
+// ----------------------------------------------------------------
+// Flex Grow
+// Utilities for controlling how flex items grow.
+// ----------------------------------------------------------------
+
+$flex-grow: (
+  'default': 1,
+  '0': 0
+);
+$utility-flex-grow-class: true !default;
+
+// ----------------------------------------------------------------
+// Flex Shrink
+// Utilities for controlling how flex items shrink.
+// ----------------------------------------------------------------
+
+$flex-shrink: (
+  'default': 1,
+  '0': 0
+);
+$utility-flex-shrink-class: true !default;
+
+// ----------------------------------------------------------------
+// Order
+// Utilities for controlling the order of flex items.
+// ----------------------------------------------------------------
+
+$flex-order: (
+  "first": -9999,
+  "last": 9999,
+  "none": 0
+);
+$flex-order-repeats: 5 !default;
+$utility-flex-order-class: true !default;
+
+// ----------------------------------------------------------------
+// EXPORTED VARIABLES - JS ONLY
+// ----------------------------------------------------------------
+
+:export {
+  flexPrefix: unquote($flex-prefix);
+  itemPrefix: unquote($item-prefix);
+  contentPrefix: unquote($content-prefix);
+  justifyPrefix: unquote($justify-prefix);
+  orderPrefix: unquote($order-prefix);
+  selfPrefix: unquote($self-prefix);
+
+  flexDirections: map-keys($flex-directions);
+  flexWrap: map-keys($flex-wrap);
+  alignItems: map-keys($align-items);
+  content: map-keys($content);
+  alignSelf: map-keys($align-self);
+  flex: map-keys($flex);
+  flexGrow: map-keys($flex-grow);
+  flexShrink: map-keys($flex-shrink);
+  flexOrder: map-keys($flex-order);
+}

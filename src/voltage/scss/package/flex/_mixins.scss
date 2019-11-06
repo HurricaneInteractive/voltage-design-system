@@ -1,0 +1,105 @@
+// ----------------------------------------------------------------
+// Flex Direction
+// ----------------------------------------------------------------
+
+/// Set a flex direction
+///
+/// @param {string} $key Key of the direction value to set
+@mixin set-flex-direction($key) {
+  flex-direction: get-flex-direction($key);
+}
+
+// ----------------------------------------------------------------
+// Flex Wrap
+// ----------------------------------------------------------------
+
+/// Set a flex wrap
+///
+/// @param {string} $key Key of the wrap value to set
+@mixin set-flex-wrap($key) {
+  flex-wrap: get-flex-wrap($key);
+}
+
+// ----------------------------------------------------------------
+// Align Items
+// ----------------------------------------------------------------
+
+/// Set a align items
+///
+/// @param {string} $key Key of the align items value to set
+@mixin set-align-item($key) {
+  align-items: get-align-item($key);
+}
+
+// ----------------------------------------------------------------
+// Content
+// ----------------------------------------------------------------
+
+/// Set a justify content
+///
+/// @param {string} $key Key of the content value to set
+@mixin set-justify-content($key) {
+  justify-content: get-flex-content($key);
+}
+
+/// Set a align content
+///
+/// @param {string} $key Key of the content value to set
+@mixin set-align-content($key) {
+  align-content: get-flex-content($key);
+}
+
+// ----------------------------------------------------------------
+// Align Self
+// ----------------------------------------------------------------
+
+/// Set a align self
+///
+/// @param {string} $key Key of the align self value to set
+@mixin set-align-self($key) {
+  align-self: get-align-self($key);
+}
+
+// ----------------------------------------------------------------
+// Flex
+// ----------------------------------------------------------------
+
+/// Set a flex
+///
+/// @param {string} $key Key of the flex value to set
+@mixin set-flex($key) {
+  flex: get-flex($key);
+}
+
+// ----------------------------------------------------------------
+// Flex Grow
+// ----------------------------------------------------------------
+
+/// Set a grow
+///
+/// @param {string} $key Key of the grow value to set
+@mixin set-flex-grow($key) {
+  flex-grow: get-flex-grow($key);
+}
+
+// ----------------------------------------------------------------
+// Flex Shrink
+// ----------------------------------------------------------------
+
+/// Set a shrink
+///
+/// @param {string} $key Key of the shrink value to set
+@mixin set-flex-shrink($key) {
+  flex-shrink: get-flex-shrink($key);
+}
+
+// ----------------------------------------------------------------
+// Order
+// ----------------------------------------------------------------
+
+/// Set a order
+///
+/// @param {string} $key Key of the order value to set
+@mixin set-order($key) {
+  order: get-order($key);
+}

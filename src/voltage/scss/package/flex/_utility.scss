@@ -1,0 +1,138 @@
+// ----------------------------------------------------------------
+// Flex Direction
+// ----------------------------------------------------------------
+
+@if $utility-flex-direction-class == true {
+  @each $key in map-keys($flex-directions) {
+    .#{$flex-prefix}-#{$key} {
+      @include set-flex-direction($key);
+    }
+  }
+}
+
+// ----------------------------------------------------------------
+// Flex Wrap
+// ----------------------------------------------------------------
+
+@if $utility-flex-wrap-class == true {
+  @each $key in map-keys($flex-wrap) {
+    .#{$flex-prefix}-#{$key} {
+      @include set-flex-wrap($key);
+    }
+  }
+}
+
+// ----------------------------------------------------------------
+// Align Items
+// ----------------------------------------------------------------
+
+@if $utility-align-items-class == true {
+  @each $key in map-keys($align-items) {
+    .#{$item-prefix}-#{$key} {
+      @include set-align-item($key);
+    }
+  }
+}
+
+// ----------------------------------------------------------------
+// Content
+// ----------------------------------------------------------------
+
+@if $utility-align-content-class == true {
+  @each $key in map-keys($content) {
+    .#{$content-prefix}-#{$key} {
+      @include set-align-content($key);
+    }
+  }
+}
+
+@if $utility-justify-content-class == true {
+  @each $key in map-keys($content) {
+    .#{$justify-prefix}-#{$key} {
+      @include set-justify-content($key);
+    }
+  }
+}
+
+// ----------------------------------------------------------------
+// Align Self
+// ----------------------------------------------------------------
+
+@if $utility-align-self-class == true {
+  @each $key in map-keys($align-self) {
+    .#{$self-prefix}-#{$key} {
+      @include set-align-self($key);
+    }
+  }
+}
+
+// ----------------------------------------------------------------
+// Flex
+// ----------------------------------------------------------------
+
+@if $utility-flex-class == true {
+  @each $key in map-keys($flex) {
+    .#{$flex-prefix}-#{$key} {
+      @include set-flex($key);
+    }
+  }
+
+  .flex {
+    display: flex;
+  }
+}
+
+// ----------------------------------------------------------------
+// Flex Grow
+// ----------------------------------------------------------------
+
+@if $utility-flex-grow-class == true {
+  @each $key in map-keys($flex-grow) {
+    @if ($key == "default") {
+      .#{$flex-prefix}-grow {
+        @include set-flex-grow($key);
+      }
+    }
+    @else {
+      .#{$flex-prefix}-grow-#{$key} {
+        @include set-flex-grow($key);
+      }
+    }
+  }
+}
+
+// ----------------------------------------------------------------
+// Flex Shrink
+// ----------------------------------------------------------------
+
+@if $utility-flex-shrink-class == true {
+  @each $key in map-keys($flex-shrink) {
+    @if ($key == "default") {
+      .#{$flex-prefix}-shrink {
+        @include set-flex-shrink($key);
+      }
+    }
+    @else {
+      .#{$flex-prefix}-shrink-#{$key} {
+        @include set-flex-shrink($key);
+      }
+    }
+  }
+}
+
+// ----------------------------------------------------------------
+// Order
+// ----------------------------------------------------------------
+
+@if $utility-flex-order-class == true {
+  @each $key in map-keys($flex-order) {
+    .#{$order-prefix}-#{$key} {
+      @include set-order($key);
+    }
+  }
+  @for $i from 1 through $flex-order-repeats {
+    .#{$order-prefix}-#{$i} {
+      order: $i;
+    }
+  }
+}
