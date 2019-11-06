@@ -3,7 +3,7 @@ import TextColours from "../../src/components/Colours/TextColours.vue"
 import BorderColours from "../../src/components/Colours/BorderColours.vue"
 
 export default {
-  title: "Colours"
+  title: "Packages/Colours"
 }
 
 export const background = () => ({

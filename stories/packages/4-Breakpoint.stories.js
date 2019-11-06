@@ -1,7 +1,7 @@
 import Breakpoints from "../../src/components/Breakpoints/Breakpoints.vue"
 
 export default {
-  title: "Breakpoint"
+  title: "Packages/Breakpoint"
 }
 
 export const test = () => ({

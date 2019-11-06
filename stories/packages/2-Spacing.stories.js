@@ -1,7 +1,7 @@
 import SpacingScale from "../../src/components/Spacing/SpacingScale.vue"
 
 export default {
-  title: "Spacing"
+  title: "Packages/Spacing"
 }
 
 export const sizes = () => ({

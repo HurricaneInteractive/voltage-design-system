@@ -3,7 +3,7 @@ import BorderWidth from "../../src/components/Border/BorderWidth.vue"
 import BorderRadius from "../../src/components/Border/BorderRadius.vue"
 
 export default {
-  title: "Border"
+  title: "Packages/Border"
 }
 
 export const style = () => ({

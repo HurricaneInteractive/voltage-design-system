@@ -8,7 +8,7 @@ import TextTransform from "../../src/components/Typography/TextTransform.vue"
 import FontFamily from "../../src/components/Typography/FontFamily.vue"
 
 export default {
-  title: "Typography"
+  title: "Packages/Typography"
 }
 
 export const size = () => ({

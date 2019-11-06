@@ -4,7 +4,7 @@ import BgPosition from "../../src/components/Background/BgPosition.vue"
 import BgSize from "../../src/components/Background/BgSize.vue"
 
 export default {
-  title: "Background"
+  title: "Packages/Background"
 }
 
 export const attachment = () => ({
