@@ -6,7 +6,7 @@ $bg-prefix: "bg";
 // when scrolling.
 // ----------------------------------------------------------------
 
-$bg-attachments: ("fixed", "local", "scroll");
+$bg-attachments: ("fixed");
 
 $utility-attachments-class: true !default;
 
@@ -18,14 +18,14 @@ $utility-attachments-class: true !default;
 
 $bg-position-directions: (
   "t": "top",
-  "l": "left",
   "r": "right",
   "b": "bottom",
+  "l": "left",
   "c": "center",
   "lt": "left top",
-  "lb": "left bottom",
   "rt": "right top",
-  "rb": "right bottom"
+  "rb": "right bottom",
+  "lb": "left bottom"
 );
 
 $utility-bg-position-class: true !default;
@@ -49,3 +49,15 @@ $utility-bg-repeat-class: true !default;
 $bg-size: ('auto', 'cover', 'contain');
 
 $utility-bg-size-class: true !default;
+
+// ----------------------------------------------------------------
+// EXPORTED VARIABLES - JS ONLY
+// ----------------------------------------------------------------
+
+:export {
+  prefix: unquote($bg-prefix);
+  attachments: $bg-attachments;
+  positions: map-keys($bg-position-directions);
+  repeat: $bg-repeat;
+  size: $bg-size;
+}

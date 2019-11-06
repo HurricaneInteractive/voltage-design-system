@@ -6,7 +6,7 @@
 ///
 /// @param {string} $key - Value to get from the `$bg-attachments` list
 @mixin set-bg-attachment($key) {
-  background-attachment: get-bg-attachment($key);
+  background-attachment: unquote(get-bg-attachment($key));
 }
 
 // ----------------------------------------------------------------
@@ -30,7 +30,7 @@
 @mixin set-bg-repeat($key) {
   $idx: index($bg-repeat, $key);
   @if idx != null {
-    background-repeat: nth($bg-repeat, $idx);
+    background-repeat: unquote(nth($bg-repeat, $idx));
   }
 }
 
@@ -44,6 +44,6 @@
 @mixin set-bg-size($key) {
   $idx: index($bg-size, $key);
   @if idx != null {
-    background-size: nth($bg-size, $idx);
+    background-size: unquote(nth($bg-size, $idx));
   }
 }

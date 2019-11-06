@@ -28,7 +28,7 @@
 ///
 @if $utility-bg-position-class == true {
   @each $dir, $val in $bg-position-directions {
-    .#{$bg-prefix}-#{dir} {
+    .#{$bg-prefix}-#{$dir} {
       @include set-bg-position($dir);
     }
   }
@@ -46,7 +46,7 @@
 ///
 @if $utility-bg-repeat-class == true {
   @each $key in $bg-repeat {
-    .#{$bg-prefix}-#{key} {
+    .#{$bg-prefix}-#{$key} {
       @include set-bg-repeat($key);
     }
   }
@@ -64,7 +64,7 @@
 ///
 @if $utility-bg-size-class == true {
   @each $key in $bg-size {
-    .#{$bg-prefix}-#{key} {
+    .#{$bg-prefix}-#{$key} {
       @include set-bg-size($key);
     }
   }

@@ -21,7 +21,7 @@
 /// @return {string} Background position value
 @function get-bg-position($key) {
   @if map-has-key($bg-position-directions, $key) {
-    @return map-get($bg-position-directions, $key);
+    @return unquote(map-get($bg-position-directions, $key));
   }
 
   @return 'none';
