@@ -149,4 +149,5 @@ $utility-flex-order-class: true !default;
   flexGrow: map-keys($flex-grow);
   flexShrink: map-keys($flex-shrink);
   flexOrder: map-keys($flex-order);
+  flexOrderRepeats: $flex-order-repeats;
 }
