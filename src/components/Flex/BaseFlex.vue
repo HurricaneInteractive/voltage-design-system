@@ -20,6 +20,7 @@ export default {
       flexGrow: scsslist(_flex.flexGrow),
       flexShrink: scsslist(_flex.flexShrink),
       flexOrder: scsslist(_flex.flexOrder),
+      flexOrderRepeats: _flex.flexOrderRepeats,
     }
   }
 }
